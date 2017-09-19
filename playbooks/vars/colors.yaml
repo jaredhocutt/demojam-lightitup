@@ -1,0 +1,34 @@
+---
+
+# These values come from the following page:
+# https://www.developers.meethue.com/documentation/hue-xy-values
+#
+# However, that page is no longer available, so I accessed it using the
+# Internet archive at:
+# https://web.archive.org/web/20161023150649/http://www.developers.meethue.com:80/documentation/hue-xy-values
+
+hue_colors:
+  blue:
+    r: 0
+    g: 0
+    b: 255
+    x: 0.153
+    y: 0.048
+  red:
+    r: 255
+    g: 0
+    b: 0
+    x: 0.692
+    y: 0.308
+  green:
+    r: 0
+    g: 255
+    b: 0
+    x: 0.17
+    y: 0.7
+  yellow:  # dark_goldenrod:
+    r: 183
+    g: 135
+    b: 10
+    x: 0.5214
+    y: 0.4361

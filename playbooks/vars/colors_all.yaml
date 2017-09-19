@@ -1,0 +1,880 @@
+---
+
+# These values come from the following page:
+# https://www.developers.meethue.com/documentation/hue-xy-values
+#
+# However, that page is no longer available, so I accessed it using the
+# Internet archive at:
+# https://web.archive.org/web/20161023150649/http://www.developers.meethue.com:80/documentation/hue-xy-values
+
+hue_colors:
+  alice_blue:
+    r: 239
+    g: 247
+    b: 255
+    x: 0.3088
+    y: 0.3212
+  antique_white:
+    r: 249
+    g: 234
+    b: 214
+    x: 0.3548
+    y: 0.3489
+  aqua:
+    r: 0
+    g: 255
+    b: 255
+    x: 0.1607
+    y: 0.3423
+  aquamarine:
+    r: 127
+    g: 255
+    b: 211
+    x: 0.2138
+    y: 0.4051
+  azure:
+    r: 239
+    g: 255
+    b: 255
+    x: 0.3059
+    y: 0.3303
+  beige:
+    r: 244
+    g: 244
+    b: 219
+    x: 0.3402
+    y: 0.356
+  bisque:
+    r: 255
+    g: 226
+    b: 196
+    x: 0.3806
+    y: 0.3576
+  black:
+    r: 0
+    g: 0
+    b: 0
+    x: 0.153
+    y: 0.048
+  blanched_almond:
+    r: 255
+    g: 234
+    b: 204
+    x: 0.3695
+    y: 0.3584
+  blue:
+    r: 0
+    g: 0
+    b: 255
+    x: 0.153
+    y: 0.048
+  blue_violet:
+    r: 137
+    g: 43
+    b: 226
+    x: 0.251
+    y: 0.1056
+  brown:
+    r: 165
+    g: 40
+    b: 40
+    x: 0.6399
+    y: 0.3041
+  burlywood:
+    r: 221
+    g: 183
+    b: 135
+    x: 0.4236
+    y: 0.3811
+  cadet_blue:
+    r: 94
+    g: 158
+    b: 160
+    x: 0.2211
+    y: 0.3328
+  chartreuse:
+    r: 127
+    g: 255
+    b: 0
+    x: 0.2505
+    y: 0.6395
+  chocolate:
+    r: 209
+    g: 104
+    b: 30
+    x: 0.6009
+    y: 0.3684
+  coral:
+    r: 255
+    g: 127
+    b: 79
+    x: 0.5763
+    y: 0.3486
+  cornflower:
+    r: 99
+    g: 147
+    b: 237
+    x: 0.1905
+    y: 0.1945
+  cornsilk:
+    r: 255
+    g: 247
+    b: 219
+    x: 0.3511
+    y: 0.3574
+  crimson:
+    r: 219
+    g: 20
+    b: 61
+    x: 0.6508
+    y: 0.2881
+  cyan:
+    r: 0
+    g: 255
+    b: 255
+    x: 0.1607
+    y: 0.3423
+  dark_blue:
+    r: 0
+    g: 0
+    b: 140
+    x: 0.153
+    y: 0.048
+  dark_cyan:
+    r: 0
+    g: 140
+    b: 140
+    x: 0.1607
+    y: 0.3423
+  dark_goldenrod:
+    r: 183
+    g: 135
+    b: 10
+    x: 0.5214
+    y: 0.4361
+  dark_gray:
+    r: 168
+    g: 168
+    b: 168
+    x: 0.3227
+    y: 0.329
+  dark_green:
+    r: 0
+    g: 99
+    b: 0
+    x: 0.17
+    y: 0.7
+  dark_khaki:
+    r: 188
+    g: 183
+    b: 107
+    x: 0.4004
+    y: 0.4331
+  dark_magenta:
+    r: 140
+    g: 0
+    b: 140
+    x: 0.3833
+    y: 0.1591
+  dark_olive_green:
+    r: 84
+    g: 107
+    b: 45
+    x: 0.3475
+    y: 0.5047
+  dark_orange:
+    r: 255
+    g: 140
+    b: 0
+    x: 0.5921
+    y: 0.3831
+  dark_orchid:
+    r: 153
+    g: 51
+    b: 204
+    x: 0.2986
+    y: 0.1341
+  dark_red:
+    r: 140
+    g: 0
+    b: 0
+    x: 0.692
+    y: 0.308
+  dark_salmon:
+    r: 232
+    g: 150
+    b: 122
+    x: 0.4837
+    y: 0.3479
+  dark_sea_green:
+    r: 142
+    g: 188
+    b: 142
+    x: 0.2924
+    y: 0.4134
+  dark_slate_blue:
+    r: 71
+    g: 61
+    b: 140
+    x: 0.2206
+    y: 0.1484
+  dark_slate_gray:
+    r: 45
+    g: 79
+    b: 79
+    x: 0.2239
+    y: 0.3368
+  dark_turquoise:
+    r: 0
+    g: 206
+    b: 209
+    x: 0.1605
+    y: 0.3366
+  dark_violet:
+    r: 147
+    g: 0
+    b: 211
+    x: 0.2824
+    y: 0.1104
+  deep_pink:
+    r: 255
+    g: 20
+    b: 147
+    x: 0.5445
+    y: 0.2369
+  deep_sky_blue:
+    r: 0
+    g: 191
+    b: 255
+    x: 0.158
+    y: 0.2379
+  dim_gray:
+    r: 104
+    g: 104
+    b: 104
+    x: 0.3227
+    y: 0.329
+  dodger_blue:
+    r: 30
+    g: 142
+    b: 255
+    x: 0.1559
+    y: 0.1599
+  firebrick:
+    r: 178
+    g: 33
+    b: 33
+    x: 0.6621
+    y: 0.3023
+  floral_white:
+    r: 255
+    g: 249
+    b: 239
+    x: 0.3361
+    y: 0.3388
+  forest_green:
+    r: 33
+    g: 140
+    b: 33
+    x: 0.1984
+    y: 0.6746
+  fuchsia:
+    r: 255
+    g: 0
+    b: 255
+    x: 0.3833
+    y: 0.1591
+  gainsboro:
+    r: 219
+    g: 219
+    b: 219
+    x: 0.3227
+    y: 0.329
+  ghost_white:
+    r: 247
+    g: 247
+    b: 255
+    x: 0.3174
+    y: 0.3207
+  gold:
+    r: 255
+    g: 214
+    b: 0
+    x: 0.4871
+    y: 0.4618
+  goldenrod:
+    r: 216
+    g: 165
+    b: 33
+    x: 0.5125
+    y: 0.4428
+  gray:
+    r: 191
+    g: 191
+    b: 191
+    x: 0.3227
+    y: 0.329
+  web_gray:
+    r: 127
+    g: 127
+    b: 127
+    x: 0.3227
+    y: 0.329
+  green:
+    r: 0
+    g: 255
+    b: 0
+    x: 0.17
+    y: 0.7
+  web_green:
+    r: 0
+    g: 127
+    b: 0
+    x: 0.17
+    y: 0.7
+  green_yellow:
+    r: 173
+    g: 255
+    b: 45
+    x: 0.3221
+    y: 0.5857
+  honeydew:
+    r: 239
+    g: 255
+    b: 239
+    x: 0.316
+    y: 0.3477
+  hot_pink:
+    r: 255
+    g: 104
+    b: 181
+    x: 0.4682
+    y: 0.2452
+  indian_red:
+    r: 204
+    g: 91
+    b: 91
+    x: 0.5488
+    y: 0.3112
+  indigo:
+    r: 73
+    g: 0
+    b: 130
+    x: 0.2428
+    y: 0.0913
+  ivory:
+    r: 255
+    g: 255
+    b: 239
+    x: 0.3334
+    y: 0.3455
+  khaki:
+    r: 239
+    g: 229
+    b: 140
+    x: 0.4019
+    y: 0.4261
+  lavender:
+    r: 229
+    g: 229
+    b: 249
+    x: 0.3085
+    y: 0.3071
+  lavender_blush:
+    r: 255
+    g: 239
+    b: 244
+    x: 0.3369
+    y: 0.3225
+  lawn_green:
+    r: 124
+    g: 252
+    b: 0
+    x: 0.2485
+    y: 0.641
+  lemon_chiffon:
+    r: 255
+    g: 249
+    b: 204
+    x: 0.3608
+    y: 0.3756
+  light_blue:
+    r: 173
+    g: 216
+    b: 229
+    x: 0.2621
+    y: 0.3157
+  light_coral:
+    r: 239
+    g: 127
+    b: 127
+    x: 0.5075
+    y: 0.3145
+  light_cyan:
+    r: 224
+    g: 255
+    b: 255
+    x: 0.2901
+    y: 0.3316
+  light_goldenrod:
+    r: 249
+    g: 249
+    b: 209
+    x: 0.3504
+    y: 0.3717
+  light_gray:
+    r: 211
+    g: 211
+    b: 211
+    x: 0.3227
+    y: 0.329
+  light_green:
+    r: 142
+    g: 237
+    b: 142
+    x: 0.2648
+    y: 0.4901
+  light_pink:
+    r: 255
+    g: 181
+    b: 193
+    x: 0.4112
+    y: 0.3091
+  light_salmon:
+    r: 255
+    g: 160
+    b: 122
+    x: 0.5016
+    y: 0.3531
+  light_sea_green:
+    r: 33
+    g: 178
+    b: 170
+    x: 0.1611
+    y: 0.3593
+  light_sky_blue:
+    r: 135
+    g: 206
+    b: 249
+    x: 0.214
+    y: 0.2749
+  light_slate_gray:
+    r: 119
+    g: 135
+    b: 153
+    x: 0.2738
+    y: 0.297
+  light_steel_blue:
+    r: 175
+    g: 196
+    b: 221
+    x: 0.276
+    y: 0.2975
+  light_yellow:
+    r: 255
+    g: 255
+    b: 224
+    x: 0.3436
+    y: 0.3612
+  lime:
+    r: 0
+    g: 255
+    b: 0
+    x: 0.17
+    y: 0.7
+  lime_green:
+    r: 51
+    g: 204
+    b: 51
+    x: 0.1972
+    y: 0.6781
+  linen:
+    r: 249
+    g: 239
+    b: 229
+    x: 0.3411
+    y: 0.3387
+  magenta:
+    r: 255
+    g: 0
+    b: 255
+    x: 0.3833
+    y: 0.1591
+  maroon:
+    r: 175
+    g: 48
+    b: 96
+    x: 0.5383
+    y: 0.2566
+  web_maroon:
+    r: 127
+    g: 0
+    b: 0
+    x: 0.692
+    y: 0.308
+  medium_aquamarine:
+    r: 102
+    g: 204
+    b: 170
+    x: 0.215
+    y: 0.4014
+  medium_blue:
+    r: 0
+    g: 0
+    b: 204
+    x: 0.153
+    y: 0.048
+  medium_orchid:
+    r: 186
+    g: 84
+    b: 211
+    x: 0.3365
+    y: 0.1735
+  medium_purple:
+    r: 147
+    g: 112
+    b: 219
+    x: 0.263
+    y: 0.1773
+  medium_sea_green:
+    r: 61
+    g: 178
+    b: 112
+    x: 0.1979
+    y: 0.5005
+  medium_slate_blue:
+    r: 122
+    g: 104
+    b: 237
+    x: 0.2179
+    y: 0.1424
+  medium_spring_green:
+    r: 0
+    g: 249
+    b: 153
+    x: 0.1655
+    y: 0.5275
+  medium_turquoise:
+    r: 71
+    g: 209
+    b: 204
+    x: 0.176
+    y: 0.3496
+  medium_violet_red:
+    r: 198
+    g: 20
+    b: 132
+    x: 0.5047
+    y: 0.2177
+  midnight_blue:
+    r: 25
+    g: 25
+    b: 112
+    x: 0.1616
+    y: 0.0802
+  mint_cream:
+    r: 244
+    g: 255
+    b: 249
+    x: 0.315
+    y: 0.3363
+  misty_rose:
+    r: 255
+    g: 226
+    b: 224
+    x: 0.3581
+    y: 0.3284
+  moccasin:
+    r: 255
+    g: 226
+    b: 181
+    x: 0.3927
+    y: 0.3732
+  navajo_white:
+    r: 255
+    g: 221
+    b: 173
+    x: 0.4027
+    y: 0.3757
+  navy_blue:
+    r: 0
+    g: 0
+    b: 127
+    x: 0.153
+    y: 0.048
+  old_lace:
+    r: 252
+    g: 244
+    b: 229
+    x: 0.3421
+    y: 0.344
+  olive:
+    r: 127
+    g: 127
+    b: 0
+    x: 0.4334
+    y: 0.5022
+  olive_drab:
+    r: 107
+    g: 142
+    b: 35
+    x: 0.354
+    y: 0.5561
+  orange:
+    r: 255
+    g: 165
+    b: 0
+    x: 0.5569
+    y: 0.4095
+  orange_red:
+    r: 255
+    g: 68
+    b: 0
+    x: 0.6731
+    y: 0.3222
+  orchid:
+    r: 216
+    g: 112
+    b: 214
+    x: 0.3688
+    y: 0.2095
+  pale_goldenrod:
+    r: 237
+    g: 232
+    b: 170
+    x: 0.3751
+    y: 0.3983
+  pale_green:
+    r: 153
+    g: 249
+    b: 153
+    x: 0.2675
+    y: 0.4826
+  pale_turquoise:
+    r: 175
+    g: 237
+    b: 237
+    x: 0.2539
+    y: 0.3344
+  pale_violet_red:
+    r: 219
+    g: 112
+    b: 147
+    x: 0.4658
+    y: 0.2773
+  papaya_whip:
+    r: 255
+    g: 239
+    b: 214
+    x: 0.3591
+    y: 0.3536
+  peach_puff:
+    r: 255
+    g: 216
+    b: 186
+    x: 0.3953
+    y: 0.3564
+  peru:
+    r: 204
+    g: 132
+    b: 63
+    x: 0.5305
+    y: 0.3911
+  pink:
+    r: 255
+    g: 191
+    b: 204
+    x: 0.3944
+    y: 0.3093
+  plum:
+    r: 221
+    g: 160
+    b: 221
+    x: 0.3495
+    y: 0.2545
+  powder_blue:
+    r: 175
+    g: 224
+    b: 229
+    x: 0.262
+    y: 0.3269
+  purple:
+    r: 160
+    g: 33
+    b: 239
+    x: 0.2725
+    y: 0.1096
+  web_purple:
+    r: 127
+    g: 0
+    b: 127
+    x: 0.3833
+    y: 0.1591
+  rebecca_purple:
+    r: 102
+    g: 51
+    b: 153
+    x: 0.2703
+    y: 0.1398
+  red:
+    r: 255
+    g: 0
+    b: 0
+    x: 0.692
+    y: 0.308
+  rosy_brown:
+    r: 188
+    g: 142
+    b: 142
+    x: 0.4026
+    y: 0.3227
+  royal_blue:
+    r: 63
+    g: 104
+    b: 224
+    x: 0.1649
+    y: 0.1338
+  saddle_brown:
+    r: 140
+    g: 68
+    b: 17
+    x: 0.5993
+    y: 0.369
+  salmon:
+    r: 249
+    g: 127
+    b: 114
+    x: 0.5346
+    y: 0.3247
+  sandy_brown:
+    r: 244
+    g: 163
+    b: 96
+    x: 0.5104
+    y: 0.3826
+  sea_green:
+    r: 45
+    g: 140
+    b: 86
+    x: 0.1968
+    y: 0.5047
+  seashell:
+    r: 255
+    g: 244
+    b: 237
+    x: 0.3397
+    y: 0.3353
+  sienna:
+    r: 160
+    g: 81
+    b: 45
+    x: 0.5714
+    y: 0.3559
+  silver:
+    r: 191
+    g: 191
+    b: 191
+    x: 0.3227
+    y: 0.329
+  sky_blue:
+    r: 135
+    g: 206
+    b: 234
+    x: 0.2206
+    y: 0.2948
+  slate_blue:
+    r: 107
+    g: 89
+    b: 204
+    x: 0.2218
+    y: 0.1444
+  slate_gray:
+    r: 112
+    g: 127
+    b: 142
+    x: 0.2762
+    y: 0.3009
+  snow:
+    r: 255
+    g: 249
+    b: 249
+    x: 0.3292
+    y: 0.3285
+  spring_green:
+    r: 0
+    g: 255
+    b: 127
+    x: 0.1671
+    y: 0.5906
+  steel_blue:
+    r: 68
+    g: 130
+    b: 181
+    x: 0.183
+    y: 0.2325
+  tan:
+    r: 209
+    g: 181
+    b: 140
+    x: 0.4035
+    y: 0.3772
+  teal:
+    r: 0
+    g: 127
+    b: 127
+    x: 0.1607
+    y: 0.3423
+  thistle:
+    r: 216
+    g: 191
+    b: 216
+    x: 0.3342
+    y: 0.2971
+  tomato:
+    r: 255
+    g: 99
+    b: 71
+    x: 0.6112
+    y: 0.3261
+  turquoise:
+    r: 63
+    g: 224
+    b: 209
+    x: 0.1702
+    y: 0.3675
+  violet:
+    r: 237
+    g: 130
+    b: 237
+    x: 0.3644
+    y: 0.2133
+  wheat:
+    r: 244
+    g: 221
+    b: 178
+    x: 0.3852
+    y: 0.3737
+  white:
+    r: 255
+    g: 255
+    b: 255
+    x: 0.3227
+    y: 0.329
+  white_smoke:
+    r: 244
+    g: 244
+    b: 244
+    x: 0.3227
+    y: 0.329
+  yellow:
+    r: 255
+    g: 255
+    b: 0
+    x: 0.4334
+    y: 0.5022
+  yellow_green:
+    r: 153
+    g: 204
+    b: 51
+    x: 0.3517
+    y: 0.5618

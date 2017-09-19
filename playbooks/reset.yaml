@@ -1,0 +1,22 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_files:
+    - vars/colors.yaml
+    - vars/main.yaml
+
+  tasks:
+    - name: Turn lights off
+      hue_off:
+        light: '{{ item }}'
+      with_items:
+        - 3
+        - 4
+
+    - name: Remove state file
+      file:
+        path: '{{ state_file }}'
+        state: absent

@@ -1,0 +1,147 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_files:
+    - vars/colors.yaml
+    - vars/main.yaml
+
+  tasks:
+    - name: Check required variables
+      assert:
+        that:
+          - chosen_color | mandatory
+          - player | mandatory
+
+    - name: Set facts
+      set_fact:
+        state_file_player: player={{ player }}
+        state_file_color: color={{ chosen_color }}
+        action_taken: none
+
+    - name: Set light ID (Player A)
+      set_fact:
+        light_id: 3
+      when: player == "A"
+
+    - name: Set light ID (Player B)
+      set_fact:
+        light_id: 4
+      when: player == "B"
+
+    - name: Check required variables
+      assert:
+        that:
+          - light_id | mandatory
+
+    - name: Check for state file
+      stat:
+        path: '{{ state_file }}'
+      register: stat_state_file
+
+    - block:
+        - name: Read state file
+          slurp:
+            src: '{{ state_file }}'
+          register: state_file_data
+
+        - name: Store state file data in memory
+          set_fact:
+            state_file_content: '{{ state_file_data.content | b64decode }}'
+      when: stat_state_file.stat.exists
+
+    - block:
+        - name: Write player to disk
+          lineinfile:
+            path: '{{ state_file }}'
+            regexp: '^player='
+            line: '{{ state_file_player }}'
+            create: yes
+
+        - name: Turn light on for player {{ player }}
+          hue_on:
+            light: '{{ light_id }}'
+            bri: 254
+            sat: 254
+            transitiontime: '{{ transitiontime }}'
+
+        - name: Cycle light colors for player {{ player }}
+          hue_colorloop:
+            light: '{{ light_id }}'
+            bri: 254
+            sat: 254
+            transitiontime: '{{ transitiontime }}'
+
+        - name: Write chosen color to disk
+          lineinfile:
+            path: '{{ state_file }}'
+            regexp: '^color='
+            line: '{{ state_file_color }}'
+            create: yes
+
+        - name: Update action taken
+          set_fact:
+            action_taken: p1_choose_color
+      when: >
+        not stat_state_file.stat.exists
+        or state_file_player in state_file_content
+        or ("player=" not in state_file_content)
+
+    - name: Check for state file
+      stat:
+        path: '{{ state_file }}'
+      register: stat_state_file
+
+    - block:
+        - name: Turn light on for player {{ player }}
+          hue_on:
+            light: '{{ light_id }}'
+            bri: 254
+            sat: 254
+            transitiontime: '{{ transitiontime }}'
+
+        # - name: Cycle light colors for player {{ player }}
+        #   hue_colorloop:
+        #     light: '{{ light_id }}'
+        #     bri: 254
+        #     sat: 254
+        #     transitiontime: '{{ transitiontime }}'
+        #
+        # - name: Wait for reveal
+        #   pause:
+        #     seconds: 2
+
+        - name: Set light to chosen color for player 2 ({{ player }}) = {{ chosen_color }}
+          hue_color:
+            light: '{{ light_id }}'
+            x: '{{ hue_colors[chosen_color].x }}'
+            y: '{{ hue_colors[chosen_color].y }}'
+            transitiontime: '{{ transitiontime }}'
+
+        - set_fact:
+            p1_chosen_color: "{{ lookup('ini', 'color type=properties file=' + state_file) }}"
+            p1_player: "{{ lookup('ini', 'player type=properties file=' + state_file) }}"
+        - set_fact:
+            p1_light_id: '{{ 3 if p1_player == "A" else 4 }}'
+
+        - name: Set light to chosen color for player 1 ({{ p1_player }}) = {{ p1_chosen_color }}
+          hue_color:
+            light: '{{ p1_light_id }}'
+            x: '{{ hue_colors[p1_chosen_color].x }}'
+            y: '{{ hue_colors[p1_chosen_color].y }}'
+            transitiontime: '{{ transitiontime }}'
+
+        - name: Play correct sound
+          command: mpg123 "{{ playbook_dir }}/files/correct.mp3"
+          when: p1_chosen_color == chosen_color
+
+        - name: Play wrong sound
+          command: mpg123 "{{ playbook_dir }}/files/wrong.mp3"
+          when: p1_chosen_color != chosen_color
+      when: >
+        action_taken == "none"
+        and stat_state_file.stat.exists
+        and "player=" in state_file_content
+        and "color=" in state_file_content
