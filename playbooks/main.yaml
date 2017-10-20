@@ -102,17 +102,6 @@
             sat: 254
             transitiontime: '{{ transitiontime }}'
 
-        # - name: Cycle light colors for player {{ player }}
-        #   hue_colorloop:
-        #     light: '{{ light_id }}'
-        #     bri: 254
-        #     sat: 254
-        #     transitiontime: '{{ transitiontime }}'
-        #
-        # - name: Wait for reveal
-        #   pause:
-        #     seconds: 2
-
         - name: Set light to chosen color for player 2 ({{ player }}) = {{ chosen_color }}
           hue_color:
             light: '{{ light_id }}'
